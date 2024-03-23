@@ -52,7 +52,8 @@ function handleSubmit(event) {
 
  
   if (hasVoted(voterId, email, name)) {
-    document.getElementById('message').innerText = 'You have already voted.'.style.color="#fff";
+    document.getElementById('message').innerText = 'You have already voted.';
+    document.getElementById('message').style.color = "#fff";
     document.getElementById('message').style.display = 'block'; 
   } else {
   

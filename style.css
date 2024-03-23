@@ -320,7 +320,6 @@ display: none;
     border: 2px solid #ccc;
     border-radius: 5px;
     font-family: "Montserrat", sans-serif;
-
 }
 
 h2 {
@@ -405,7 +404,7 @@ h2 {
     width: calc(100% / 3 - 60px); /* Adjust width and consider margins */
     /* margin-right: 10px; Adjust margin as needed */
     overflow: hidden; /* Hide overflow content */
-    transition: width 0.3s ease; /* Smooth transition */
+    transition: width 0.3s ease;
 }
 
 .frame1:hover {
@@ -419,4 +418,67 @@ width: calc(100% / 3 + 40px); /* Expand width on hover */
 .frame1 img{
     width: 100%;
     border-radius: 28px;
+}
+
+.bda-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.challenges-countered {
+    background-image: url(https://www.hubspot.com/hubfs/tools/brand-kit-generator/section-2.webp);
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second-background {
+    background-image: url(https://www.hubspot.com/hubfs/Imported%20sitepage%20images/section-5.png);
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.third-background {
+    background-image: url(https://www.hubspot.com/hubfs/Imported%20sitepage%20images/section-4.png);
+    background-size: cover;
+    height: 50rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.traditional{
+    width: 60%;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+}
+
+.traditional h1{
+    font-family: "Geostar Fill", serif;
+    font-size: 31px;
+    font-weight: 500;
+    margin: 30px;
+}
+
+.traditional p{
+    padding: 50px;
+    text-align: justify;
+}
+
+.image-tradition{
+    position: relative;
+    top: 50%;
+}
+
+.list-carry{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    align-items: center;
 }

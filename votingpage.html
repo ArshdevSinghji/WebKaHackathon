@@ -65,24 +65,24 @@
         <tbody>
           <tr>
             <td>Shanaya</td>
-            <td><button onclick="vote('Shanaya')">Vote</button></td>
+            <td><button class="btn" onclick="vote('Shanaya')">Vote</button></td>
           </tr>
           <tr>
             <td>Shreya</td>
-            <td><button onclick="vote('Shreya')">Vote</button></td>
+            <td><button class="btn" onclick="vote('Shreya')">Vote</button></td>
           </tr>
           <tr>
             <td>Ayesha</td>
-            <td><button onclick="vote('Ayesha')">Vote</button></td>
+            <td><button class="btn" onclick="vote('Ayesha')">Vote</button></td>
           </tr>
           <tr>
             <td>Aditi</td>
-            <td><button onclick="vote('Aditi')">Vote</button></td>
+            <td><button class="btn" onclick="vote('Aditi')">Vote</button></td>
           </tr>
         </tbody>
       </table>
       <p id="message"></p>
-      <button id="backBtn" onclick="backToHomePage()" style="display:none;">Back to Home</button>
+      <button id="backBtn" onclick="backToHomePage()" style="display:block;">Back to Home</button>
       <div id="chartContainer">
         <canvas id="voteChart"></canvas>
       </div>
@@ -92,11 +92,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 <script>
-
-  let votes = {
+  let votes = JSON.parse(localStorage.getItem('votes')) || {
     Shanaya: 0,
     Shreya: 0,
-    Ayesha: 0,
+    Ayesha: 0, 
     "Aditi": 0
   };
 
@@ -119,7 +118,7 @@
   }
 
   function disableVotingButtons() {
-    const votingButtons = document.querySelectorAll('button');
+    const votingButtons = document.querySelectorAll('.btn');
     votingButtons.forEach(button => {
       button.disabled = true;
     });
